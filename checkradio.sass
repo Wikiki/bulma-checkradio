@@ -38,8 +38,8 @@ $checkbox-border: .1rem solid $grey-light !default
       top: ( $newSize / 2 ) - ( $radio-marker-size / 2 )
       left: ( $newSize / 2 ) - ( $radio-marker-size / 2 )
 
-.is-radio,
-.is-checkbox
+.is-radio[type="radio"],
+.is-checkbox[type="checkbox"]
   position: absolute
   display: none
 
@@ -110,7 +110,7 @@ $checkbox-border: .1rem solid $grey-light !default
     +checkbox-size($size-large)
 
 
-.is-checkbox
+.is-checkbox[type="checkbox"]
   + label
     &::before
       border-radius: $checkbox-radius
@@ -146,7 +146,7 @@ $checkbox-border: .1rem solid $grey-light !default
             background-color: $color !important
 
 
-.is-radio
+.is-radio[type="radio"]
   + label
     &::before
       border-radius: 50%
