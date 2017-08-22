@@ -1,7 +1,7 @@
 # bulma-checkradio
 Bulma's extension to display better checkbox and radio imputs (find all my bulma's extensions [here](https://github.com/Wikiki/bulma-extensions))
 
-<img src="checkradio-example.png" width="50%">
+<img src="./checkradio-example.png" width="50%">
 
 Usage
 ---
