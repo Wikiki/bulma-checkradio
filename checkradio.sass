@@ -120,6 +120,12 @@ $checkbox-disabled-checked-color: $grey-lighter !default
       border-color: #fff
       border-top: 0
       border-left: 0
+    
+  &.is-rounded
+    + label
+      &::before
+        border-radius: 50%
+      
   &:checked
     + label
       &::before
