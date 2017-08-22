@@ -1,41 +1,42 @@
 $checkbox-radius: $radius !default
 $checkbox-border: .1rem solid $grey-light !default
-$checkbox-disabled-color: $grey-lighter !default
-$checkbox-disabled-checked-color: $grey-lighter !default
 
 // Use a mixin to define all ratios in the same spot
 =checkbox-size($size)
-  $check-marker-size: $size / 2
+  $newSize: $size * 1.5
+  $height: $newSize / 2.5
+  $width: $newSize / 4
 
   + label
     font-size: $size
-    line-height: $size
-    padding-left: $size * 1.2
+    line-height: $newSize
+    padding-left: $size * 2
     &::before
-      width: $size
-      height: $size
+      width: $newSize
+      height: $newSize
     &::after
-      width: $size / 4
-      height: $size / 2
-      top: $size / 4
-      left: $size / 3
+      width: $width
+      height: $height
+      top: $width
+      left: $height
 
 // Use a mixin to define all ratios in the same spot
 =radio-size($size)
-  $radio-marker-size: $size / 2
+  $newSize: $size * 1.5
+  $radio-marker-size: $newSize * .5
 
   + label
     font-size: $size
-    line-height: $size
-    padding-left: $size * 1.2
+    line-height: $newSize
+    padding-left: $size * 2
     &::before
-      width: $size
-      height: $size
+      width: $newSize
+      height: $newSize
     &::after
       width: $radio-marker-size
       height: $radio-marker-size
-      top: ( $size / 2 ) - ( $radio-marker-size / 2 )
-      left: ( $size / 2 ) - ( $radio-marker-size / 2 )
+      top: ( $newSize / 2 ) - ( $radio-marker-size / 2 )
+      left: ( $newSize / 2 ) - ( $radio-marker-size / 2 )
 
 .is-radio,
 .is-checkbox
@@ -68,17 +69,21 @@ $checkbox-disabled-checked-color: $grey-lighter !default
       content: ''
 
   &:checked
+    &[disabled]
+      cursor: not-allowed
+      + label
+        opacity: 0.5
     + label
       &::before
         animation-name: none
       &::after
         display: block
 
-  [disabled]
+  &[disabled]
     cursor: not-allowed
     + label
+      opacity: 0.5
       cursor: not-allowed
-      color: $checkbox-disabled-color
       &:hover,
       &:before,
       &:after
@@ -87,11 +92,9 @@ $checkbox-disabled-checked-color: $grey-lighter !default
     &:hover
       cursor: not-allowed
       &::before
-        border-color: $checkbox-disabled-color
         animation-name: none
 
     &::before
-      border-color: $checkbox-disabled-color
       cursor: not-allowed
 
     &::after
@@ -120,23 +123,17 @@ $checkbox-disabled-checked-color: $grey-lighter !default
       border-color: #fff
       border-top: 0
       border-left: 0
-    
+
   &.is-circle
     + label
       &::before
         border-radius: 50%
-      
+
   &:checked
     + label
       &::before
         border: $primary
         background: $primary
-
-    [disabled]
-      + label
-        &::before
-          border: $checkbox-disabled-color
-          background: $checkbox-disabled-checked-color
 
   @each $name, $pair in $colors
     $color: nth($pair, 1)
@@ -169,13 +166,6 @@ $checkbox-disabled-checked-color: $grey-lighter !default
     + label
       &::before
         border: 1px solid $primary
-
-    [disabled]
-      + label
-        &::before
-          border: 1px solid $checkbox-disabled-checked-color
-        &::after
-          background: $checkbox-disabled-checked-color
 
   @each $name, $pair in $colors
     $color: nth($pair, 1)
