@@ -25,6 +25,7 @@ Usage
 Modifiers
 ---
 This extension uses Bulma's color & size modifiers
+
 You can also use ```is-circle``` modifier on checkboxes to get a circle one
 
 Variables
