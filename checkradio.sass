@@ -40,8 +40,11 @@ $checkbox-border: .1rem solid $grey-light !default
 
 .is-radio[type="radio"],
 .is-checkbox[type="checkbox"]
+  outline: 0
+  user-select: none
   position: absolute
-  display: none
+  margin-bottom: 0
+  opacity: 0
 
   + label
     position: relative
