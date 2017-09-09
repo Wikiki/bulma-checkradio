@@ -1,5 +1,9 @@
 # Bulma-Checkradio Changelog
 
+## 0.0.4
+
+Add new styles: No border - Background Color
+
 ## 0.0.3
 
 Fix commit issues

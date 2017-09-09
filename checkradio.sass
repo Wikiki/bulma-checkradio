@@ -1,5 +1,5 @@
 $checkbox-radius: $radius !default
-$checkbox-border: .1rem solid $grey-light !default
+$checkbox-border: .1rem solid $grey-lighter !default
 
 =checkbox-size($size)
   $newSize: $size * 1.5
@@ -27,7 +27,6 @@ $checkbox-border: .1rem solid $grey-light !default
   + label
     font-size: $size
     line-height: $newSize
-    padding-left: $size * 2
     &::before
       width: $newSize
       height: $newSize
@@ -72,6 +71,9 @@ $checkbox-border: .1rem solid $grey-light !default
       content: ''
 
   &:checked
+    + label
+      &::before
+        border: $checkbox-border
     &[disabled]
       cursor: not-allowed
       + label
@@ -112,6 +114,11 @@ $checkbox-border: .1rem solid $grey-light !default
   &.is-large
     +checkbox-size($size-large)
 
+  &.has-no-border
+    + label
+      &::before
+        border: none !important
+
 
 .is-checkbox[type="checkbox"]
   + label
@@ -121,9 +128,9 @@ $checkbox-border: .1rem solid $grey-light !default
     &::after
       box-sizing: border-box
       transform: rotate(45deg)
-      border-width: 2px
+      border-width: .1rem
       border-style: solid
-      border-color: #fff
+      border-color: $primary
       border-top: 0
       border-left: 0
 
@@ -132,25 +139,22 @@ $checkbox-border: .1rem solid $grey-light !default
       &::before
         border-radius: 50%
 
-  &:checked
-    + label
-      &::before
-        border: $primary
-        background: $primary
-
   @each $name, $pair in $colors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
     &.is-#{$name}
       &:checked
         + label
-          &::before
-            border-color: $color !important
-            background-color: $color !important
           &::after
-            border-color: $color-invert !important
-            background-color: $color !important
-
+            border-color: $color !important
+        &.has-background-color
+          + label
+            &::before
+              border-color: $color !important
+              background-color: $color !important
+            &::after
+              border-color: $color-invert !important
+              background-color: $color !important
 
 .is-radio[type="radio"]
   + label
@@ -160,6 +164,12 @@ $checkbox-border: .1rem solid $grey-light !default
       border-radius: 50%
       background: $primary
 
+  &:checked
+    &.has-background-color
+      + label
+        &::before
+          border-color: $primary !important
+
   +radio-size($size-normal)
   &.is-small
     +radio-size($size-small)
@@ -168,19 +178,19 @@ $checkbox-border: .1rem solid $grey-light !default
   &.is-large
     +radio-size($size-large)
 
-  &:checked
-    + label
-      &::before
-        border: 1px solid $primary
-
   @each $name, $pair in $colors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
     &.is-#{$name}
       &:checked
         + label
-          &::before
-            border-color: $color !important
           &::after
             border-color: $color !important
             background-color: $color !important
+        &.has-background-color
+          + label
+            &::before
+              border-color: $color !important
+            &::after
+              border-color: $color !important
+              background-color: $color !important
