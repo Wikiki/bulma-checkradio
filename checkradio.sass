@@ -8,7 +8,7 @@ $checkbox-border: .1rem solid $grey-lighter !default
 
   + label
     font-size: $size
-    line-height: $newSize
+    // line-height: $newSize
     padding-left: $size * 2
     &::before
       width: $newSize
@@ -16,7 +16,7 @@ $checkbox-border: .1rem solid $grey-lighter !default
     &::after
       width: $width
       height: $height
-      top: $width
+      top: ( ( $newSize / 2 ) - ( $height / 2 ) ) / 2
       left: $height
 
 // Use a mixin to define all ratios in the same spot
@@ -33,23 +33,23 @@ $checkbox-border: .1rem solid $grey-lighter !default
     &::after
       width: $radio-marker-size
       height: $radio-marker-size
-      top: ( $newSize / 2 ) - ( $radio-marker-size / 2 )
+      top: ( ( $newSize / 2 ) - ( $radio-marker-size / 2 ) ) / 2
       left: ( $newSize / 2 ) - ( $radio-marker-size / 2 )
 
 .is-radio[type="radio"],
 .is-checkbox[type="checkbox"]
   outline: 0
   user-select: none
-  position: absolute
   margin-bottom: 0
   opacity: 0
+  position: absolute
 
   + label
     position: relative
-    display: inline-block
+    display: initial
     cursor: pointer
     vertical-align: middle
-    margin-right: 1rem
+    margin-right: 0.5rem
 
     &:hover
       &::before
@@ -59,9 +59,8 @@ $checkbox-border: .1rem solid $grey-lighter !default
 
     &::before
       position: absolute
-      top: 0
       left: 0
-      display: inline-block
+      top: -.2rem
       content: ''
       border: $checkbox-border
 
@@ -82,7 +81,7 @@ $checkbox-border: .1rem solid $grey-lighter !default
       &::before
         animation-name: none
       &::after
-        display: block
+        display: initial
 
   &[disabled]
     cursor: not-allowed
