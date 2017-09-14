@@ -1,5 +1,9 @@
 # Bulma-Checkradio Changelog
 
+## 0.0.5
+
+* #5 Add Right-To-Left display
+
 ## 0.0.4
 
 Add new styles: No border - Background Color

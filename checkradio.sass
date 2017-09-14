@@ -18,6 +18,13 @@ $checkbox-border: .1rem solid $grey-lighter !default
       height: $height
       top: ( ( $newSize / 2 ) - ( $height / 2 ) ) / 2
       left: $height
+  &.is-rtl
+    + label
+      padding-left: 0
+      padding-right: $size * 2
+      &::after
+        left: auto
+        right: $height
 
 // Use a mixin to define all ratios in the same spot
 =radio-size($size)
@@ -35,6 +42,11 @@ $checkbox-border: .1rem solid $grey-lighter !default
       height: $radio-marker-size
       top: ( ( $newSize / 2 ) - ( $radio-marker-size / 2 ) ) / 2
       left: ( $newSize / 2 ) - ( $radio-marker-size / 2 )
+  &.is-rtl
+    + label
+      &::after
+        left: auto
+        right: ( $newSize / 2 ) - ( $radio-marker-size / 2 )
 
 .is-radio[type="radio"],
 .is-checkbox[type="checkbox"]
@@ -68,6 +80,14 @@ $checkbox-border: .1rem solid $grey-lighter !default
       position: absolute
       display: none
       content: ''
+
+  &.is-rtl
+    + label
+      margin-right: 0rem
+      margin-left: 0.5rem
+      &::before
+        left: auto
+        right: 0
 
   &:checked
     + label
