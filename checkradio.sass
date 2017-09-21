@@ -1,6 +1,7 @@
 $checkbox-radius: $radius !default
 $checkbox-border: .1rem solid $grey-lighter !default
 $checkradio-focus-shadow: inset 0 2px 3px 0 rgba($grey-light, 0.2) !default
+$checkradio-top-offset: -0.2rem !default
 
 =checkbox-size($size)
   $newSize: $size * 1.5
@@ -32,24 +33,17 @@ $checkradio-focus-shadow: inset 0 2px 3px 0 rgba($grey-light, 0.2) !default
   $newSize: $size * 1.5
   $height: $newSize
   $width: $newSize
-  $radio-marker-size: $newSize / 2
 
   + label
     font-size: $size
     line-height: $newSize
-    &::before
+    padding-left: $size * 2
+    &::before, &::after
       width: $width
       height: $height
-    &::after
-      width: $radio-marker-size
-      height: $radio-marker-size
-      top: ( ($height / 2) - ($radio-marker-size / 2) ) - .2rem
-      left: ($width / 2) - ($radio-marker-size / 2)
   &.is-rtl
     + label
-      &::after
-        left: auto
-        right: ( $newSize / 2 ) - ( $radio-marker-size / 2 )
+      padding-right: $size * 2
 
 .is-radio[type="radio"],
 .is-checkbox[type="checkbox"]
@@ -75,7 +69,7 @@ $checkradio-focus-shadow: inset 0 2px 3px 0 rgba($grey-light, 0.2) !default
     &::before
       position: absolute
       left: 0
-      top: -.2rem
+      top: $checkradio-top-offset
       content: ''
       border: $checkbox-border
 
@@ -133,14 +127,6 @@ $checkradio-focus-shadow: inset 0 2px 3px 0 rgba($grey-light, 0.2) !default
       cursor: not-allowed
 
 
-  +checkbox-size($size-normal)
-  &.is-small
-    +checkbox-size($size-small)
-  &.is-medium
-    +checkbox-size($size-medium)
-  &.is-large
-    +checkbox-size($size-large)
-
   &.has-no-border
     + label
       &::before
@@ -166,6 +152,15 @@ $checkradio-focus-shadow: inset 0 2px 3px 0 rgba($grey-light, 0.2) !default
       &::before
         border-radius: 50%
 
+
+  +checkbox-size($size-normal)
+  &.is-small
+    +checkbox-size($size-small)
+  &.is-medium
+    +checkbox-size($size-medium)
+  &.is-large
+    +checkbox-size($size-large)
+
   @each $name, $pair in $colors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
@@ -190,12 +185,22 @@ $checkradio-focus-shadow: inset 0 2px 3px 0 rgba($grey-light, 0.2) !default
     &::after
       border-radius: 50%
       background: $primary
+      top: $checkradio-top-offset
+      left: 0
+      transform: scale(0.5)
 
   &:checked
     &.has-background-color
       + label
         &::before
           border-color: $primary !important
+
+  &.is-rtl
+    + label
+      padding-left: 0
+      &::after
+        left: auto
+        right: 0
 
   +radio-size($size-normal)
   &.is-small
