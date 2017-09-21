@@ -1,6 +1,6 @@
 {
   "name": "bulma-checkradio",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Make classic checkbox and radio more sexy in different colors, sizes, and states ",
   "main": "index.js",
   "scripts": {
