@@ -1,5 +1,9 @@
 # Bulma-Checkradio Changelog
 
+## 0.0.6
+
+* #7 Radio button misalignment
+
 ## 0.0.5
 
 * #5 Add Right-To-Left display

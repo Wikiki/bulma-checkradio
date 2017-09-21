@@ -29,19 +29,21 @@ $checkbox-border: .1rem solid $grey-lighter !default
 // Use a mixin to define all ratios in the same spot
 =radio-size($size)
   $newSize: $size * 1.5
-  $radio-marker-size: $newSize * .5
+  $height: $newSize
+  $width: $newSize
+  $radio-marker-size: $newSize / 2
 
   + label
     font-size: $size
     line-height: $newSize
     &::before
-      width: $newSize
-      height: $newSize
+      width: $width
+      height: $height
     &::after
       width: $radio-marker-size
       height: $radio-marker-size
-      top: ( ( $newSize / 2 ) - ( $radio-marker-size / 2 ) ) / 2
-      left: ( $newSize / 2 ) - ( $radio-marker-size / 2 )
+      top: ( ($height / 2) - ($radio-marker-size / 2) ) - .2rem
+      left: ($width / 2) - ($radio-marker-size / 2)
   &.is-rtl
     + label
       &::after
