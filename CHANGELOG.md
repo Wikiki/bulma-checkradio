@@ -3,6 +3,7 @@
 ## 0.0.6
 
 * #7 Radio button misalignment
+* #6 Active effect when I have focus on a radio or checkbox
 
 ## 0.0.5
 
