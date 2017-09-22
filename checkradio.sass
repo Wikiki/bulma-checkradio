@@ -1,7 +1,6 @@
 $checkbox-radius: $radius !default
 $checkbox-border: .1rem solid $grey-lighter !default
-$checkradio-focus-shadow: inset 0 2px 3px 0 rgba($grey-light, 0.2) !default
-$checkradio-top-offset: -0.1rem !default
+$checkradio-focus: 1px dotted $grey-light !default
 
 =checkbox-size($size)
   $newSize: $size * 1.5
@@ -18,7 +17,7 @@ $checkradio-top-offset: -0.1rem !default
     &::after
       width: $width
       height: $height
-      top: ( ( $newSize / 2 ) - ( $height / 2 ) ) / 1.5
+      top: ( ( $newSize / 2 ) - ( $height / 2 ) )
       left: $height
   &.is-rtl
     + label
@@ -69,7 +68,7 @@ $checkradio-top-offset: -0.1rem !default
     &::before
       position: absolute
       left: 0
-      top: $checkradio-top-offset
+      top: 0
       content: ''
       border: $checkbox-border
 
@@ -89,7 +88,12 @@ $checkradio-top-offset: -0.1rem !default
   &:focus
     + label
       &::before
-        box-shadow: $checkradio-focus-shadow
+        outline: $checkradio-focus
+
+  &:hover:not([disabled])
+    + label
+      &::before
+        border-color: $primary !important
 
   &:checked
     + label
@@ -164,6 +168,10 @@ $checkradio-top-offset: -0.1rem !default
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
     &.is-#{$name}
+      &:hover:not([disabled])
+        + label
+          &::before
+            border-color: $color !important
       &:checked
         + label
           &::after
@@ -184,7 +192,7 @@ $checkradio-top-offset: -0.1rem !default
     &::after
       border-radius: 50%
       background: $primary
-      top: $checkradio-top-offset
+      top: 0
       left: 0
       transform: scale(0.5)
 
@@ -213,6 +221,10 @@ $checkradio-top-offset: -0.1rem !default
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
     &.is-#{$name}
+      &:hover:not([disabled])
+        + label
+          &::before
+            border-color: $color !important
       &:checked
         + label
           &::after

@@ -1,5 +1,11 @@
 # Bulma-Checkradio Changelog
 
+## 0.0.7
+
+* Improve focus highlight
+* Add hover effect
+* PR #8 Use scale transform instead of manual calculation for radio highlight 
+
 ## 0.0.6
 
 * #7 Radio button misalignment
