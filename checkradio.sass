@@ -1,6 +1,7 @@
 $checkbox-radius: $radius !default
 $checkbox-border: .1rem solid $grey-lighter !default
 $checkradio-focus: 1px dotted $grey-light !default
+$checkradio-top-offset: -0.2rem !default
 
 =checkbox-size($size)
   $newSize: $size * 1.5
@@ -17,7 +18,7 @@ $checkradio-focus: 1px dotted $grey-light !default
     &::after
       width: $width
       height: $height
-      top: ( ( $newSize / 2 ) - ( $height / 2 ) )
+      top: ( ( $newSize / 2 ) - ( $height / 2 ) ) / 2
       left: $height
   &.is-rtl
     + label
@@ -68,7 +69,7 @@ $checkradio-focus: 1px dotted $grey-light !default
     &::before
       position: absolute
       left: 0
-      top: 0
+      top: $checkradio-top-offset
       content: ''
       border: $checkbox-border
 
@@ -76,6 +77,7 @@ $checkradio-focus: 1px dotted $grey-light !default
       position: absolute
       display: none
       content: ''
+      top: $checkradio-top-offset
 
   &.is-rtl
     + label
@@ -192,7 +194,6 @@ $checkradio-focus: 1px dotted $grey-light !default
     &::after
       border-radius: 50%
       background: $primary
-      top: 0
       left: 0
       transform: scale(0.5)
 
