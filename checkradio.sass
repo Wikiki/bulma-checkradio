@@ -53,8 +53,8 @@ $checkradio-top-offset: 0rem !default
     + label
       padding-right: $size * 2
 
-.is-radio[type="radio"],
-.is-checkbox[type="checkbox"]
+.is-checkradio[type="radio"],
+.is-checkradio[type="checkbox"]
   outline: 0
   user-select: none
   display: inline-block
@@ -156,7 +156,7 @@ $checkradio-top-offset: 0rem !default
       &::before
         border: none !important
 
-.is-checkbox[type="checkbox"]
+.is-checkradio[type="checkbox"]
   + label
     &::before
       border-radius: $checkbox-radius
@@ -211,7 +211,7 @@ $checkradio-top-offset: 0rem !default
             &::after
               border-color: $color-invert !important
 
-.is-radio[type="radio"]
+.is-checkradio[type="radio"]
   + label
     &::before
       border-radius: 50%
@@ -226,6 +226,10 @@ $checkradio-top-offset: 0rem !default
       + label
         &::before
           border-color: $primary !important
+          background-color: $primary !important
+        &::after
+          border-color: $white !important
+          background-color: $white !important
 
   &.is-rtl
     + label
@@ -259,6 +263,7 @@ $checkradio-top-offset: 0rem !default
           + label
             &::before
               border-color: $color !important
-            &::after
-              border-color: $color !important
               background-color: $color !important
+            &::after
+              border-color: $color-invert !important
+              background-color: $color-invert !important
