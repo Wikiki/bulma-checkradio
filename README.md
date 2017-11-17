@@ -10,4 +10,4 @@ Bulma's extension to display better checkbox and radio imputs
 
 Documentation & Demo
 ---
-You can find the Documentation and a demo [here](https://wikiki.github.io/bulma-extensions/checkradio)
+You can find the Documentation and a demo [here](https://wikiki.github.io/form/checkradio/)
