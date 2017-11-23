@@ -59,7 +59,6 @@ $checkradio-top-offset: 0rem !default
   user-select: none
   display: inline-block
   position: absolute
-  left: -10000px
   opacity: 0
 
   + label
@@ -211,6 +210,13 @@ $checkradio-top-offset: 0rem !default
             background: $color
             &::after
               border-color: $color-invert !important
+
+  &:indeterminate
+    + label
+      &::after
+        display: initial
+        transform: rotate(90deg)
+        border-bottom: none
 
 .is-checkradio[type="radio"]
   + label
