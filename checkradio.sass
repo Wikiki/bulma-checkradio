@@ -217,6 +217,13 @@ $checkradio-top-offset: 0rem !default
         display: initial
         transform: rotate(90deg)
         border-bottom: none
+    @each $name, $pair in $colors
+      $color: nth($pair, 1)
+      $color-invert: nth($pair, 2)
+      &.is-#{$name}
+        + label
+          &::after
+            border-color: $color
 
 .is-checkradio[type="radio"]
   + label
