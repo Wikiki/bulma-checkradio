@@ -1,8 +1,8 @@
 {
   "name": "bulma-checkradio",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Make classic checkbox and radio more sexy in different colors, sizes, and states ",
-  "main": "index.js",
+  "main": "checkradio.sass",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,5 +21,15 @@
   "bugs": {
     "url": "https://github.com/Wikiki/bulma-checkradio/issues"
   },
-  "homepage": "https://github.com/Wikiki/bulma-checkradio#readme"
+  "homepage": "https://github.com/Wikiki/bulma-checkradio#readme",
+  "devDependencies": {
+    "bulma": "^0.6.1"
+  },
+  "files": [
+    "checkradio.sass",
+    "checkradio.css",
+    "checkradio.min.css",
+    "LICENSE",
+    "README.md"
+  ]
 }
