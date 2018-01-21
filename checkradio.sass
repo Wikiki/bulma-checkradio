@@ -66,8 +66,8 @@ $checkradio-top-offset: 0rem !default
     display: initial
     cursor: pointer
     vertical-align: middle
-    margin-right: 0.5rem
-    padding: .2rem 1rem .2rem 0
+    margin: .5em
+    padding: .2rem .5rem .2rem 0
     border-radius: $checkbox-radius
 
     &:hover
@@ -153,6 +153,7 @@ $checkradio-top-offset: 0rem !default
       width: 100% !important
       background: $checkbox-block-background
       color: findColorInvert( $checkbox-block-background )
+      padding-right: .75em
       &::before
         border: none !important
 
@@ -187,6 +188,11 @@ $checkradio-top-offset: 0rem !default
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
     &.is-#{$name}
+      &.has-background-color
+        + label
+          &::before
+            border-color: transparent !important
+            background-color: $color !important
       &:hover:not([disabled])
         + label
           &::before
@@ -198,7 +204,7 @@ $checkradio-top-offset: 0rem !default
         &.has-background-color
           + label
             &::before
-              border-color: $color !important
+              border-color: transparent !important
               background-color: $color !important
             &::after
               border-color: $color-invert !important
@@ -239,11 +245,11 @@ $checkradio-top-offset: 0rem !default
     &.has-background-color
       + label
         &::before
-          border-color: $primary !important
-          background-color: $primary !important
+          border-color: $text !important
+          background-color: $text !important
         &::after
-          border-color: $white !important
-          background-color: $white !important
+          border-color: $text !important
+          background-color: $text !important
 
   &.is-rtl
     + label
@@ -264,6 +270,11 @@ $checkradio-top-offset: 0rem !default
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
     &.is-#{$name}
+      &.has-background-color
+        + label
+          &::before
+            border-color: $color !important
+            background-color: $color !important
       &:hover:not([disabled])
         + label
           &::before
