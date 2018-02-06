@@ -119,7 +119,7 @@ $checkradio-top-offset: 0rem !default
       &::before
         animation-name: none
       &::after
-        display: initial
+        display: inline-block
 
   &[disabled]
     cursor: not-allowed
@@ -220,7 +220,7 @@ $checkradio-top-offset: 0rem !default
   &:indeterminate
     + label
       &::after
-        display: initial
+        display: inline-block
         transform: rotate(90deg)
         border-bottom: none
     @each $name, $pair in $colors
