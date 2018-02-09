@@ -2,6 +2,7 @@
   "name": "bulma-checkradio",
   "description": "Make classic checkbox and radio more sexy in different colors, sizes, and states",
   "main": "checkradio.sass",
+  "version": "0.1.6",
   "authors": [
     "Wikiki <wikiki@protonmail.com> (https://wikiki.github.io/bulma-extensions/overview)"
   ],
