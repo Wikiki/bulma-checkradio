@@ -1,3 +1,19 @@
+<a name="0.1.7"></a>
+## [0.1.7](https://github.com/Wikiki/bulma-checkradio/compare/v0.1.4...v0.1.7) (2018-02-09)
+
+
+### Bug Fixes
+
+* **bower:** Add missing version ([48af909](https://github.com/Wikiki/bulma-checkradio/commit/48af909))
+
+
+### Features
+
+* **gulp:** Add gulp dependencies ([b9f95ce](https://github.com/Wikiki/bulma-checkradio/commit/b9f95ce))
+* **gulp:** Add release task ([f86ed67](https://github.com/Wikiki/bulma-checkradio/commit/f86ed67))
+
+
+
 # Change Log
 
 ## [v0.1.4](https://github.com/wikiki/bulma-checkradio/tree/v0.1.4) (2017-11-30)
