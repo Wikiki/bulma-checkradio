@@ -1,3 +1,8 @@
+<a name="0.1.11"></a>
+## [0.1.11](https://github.com/Wikiki/bulma-checkradio/compare/0.1.10...0.1.11) (2018-02-10)
+
+
+
 <a name="0.1.10"></a>
 ## [0.1.10](https://github.com/Wikiki/bulma-checkradio/compare/0.1.9...0.1.10) (2018-02-10)
 
