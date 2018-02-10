@@ -1,3 +1,15 @@
+<a name="0.1.9"></a>
+## [0.1.9](https://github.com/Wikiki/bulma-checkradio/compare/0.1.8...0.1.9) (2018-02-10)
+
+
+### Bug Fixes
+
+* **gulp:** Correct dist filenames ([e7a4702](https://github.com/Wikiki/bulma-checkradio/commit/e7a4702))
+* **package:** Correct file paths ([9af3299](https://github.com/Wikiki/bulma-checkradio/commit/9af3299))
+* **travis:** Remove configuration ([fe6d68d](https://github.com/Wikiki/bulma-checkradio/commit/fe6d68d))
+
+
+
 <a name="0.1.8"></a>
 ## [0.1.8](https://github.com/Wikiki/bulma-checkradio/compare/0.1.7...0.1.8) (2018-02-09)
 
