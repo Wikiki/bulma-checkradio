@@ -1,3 +1,56 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/Wikiki/bulma-checkradio/compare/0.1.11...1.0.0) (2018-02-10)
+
+
+
+<a name="0.1.11"></a>
+## [0.1.11](https://github.com/Wikiki/bulma-checkradio/compare/0.1.10...0.1.11) (2018-02-10)
+
+
+
+<a name="0.1.10"></a>
+## [0.1.10](https://github.com/Wikiki/bulma-checkradio/compare/0.1.9...0.1.10) (2018-02-10)
+
+
+### Bug Fixes
+
+* **gulp:** Use UMD modules style ([0791b53](https://github.com/Wikiki/bulma-checkradio/commit/0791b53))
+
+
+
+<a name="0.1.9"></a>
+## [0.1.9](https://github.com/Wikiki/bulma-checkradio/compare/0.1.8...0.1.9) (2018-02-10)
+
+
+### Bug Fixes
+
+* **gulp:** Correct dist filenames ([e7a4702](https://github.com/Wikiki/bulma-checkradio/commit/e7a4702))
+* **package:** Correct file paths ([9af3299](https://github.com/Wikiki/bulma-checkradio/commit/9af3299))
+* **travis:** Remove configuration ([fe6d68d](https://github.com/Wikiki/bulma-checkradio/commit/fe6d68d))
+
+
+
+<a name="0.1.8"></a>
+## [0.1.8](https://github.com/Wikiki/bulma-checkradio/compare/0.1.7...0.1.8) (2018-02-09)
+
+
+
+<a name="0.1.7"></a>
+## [0.1.7](https://github.com/Wikiki/bulma-checkradio/compare/v0.1.4...v0.1.7) (2018-02-09)
+
+
+### Bug Fixes
+
+* **bower:** Add missing version ([48af909](https://github.com/Wikiki/bulma-checkradio/commit/48af909))
+
+
+### Features
+
+* **gulp:** Add gulp dependencies ([b9f95ce](https://github.com/Wikiki/bulma-checkradio/commit/b9f95ce))
+* **gulp:** Add release task ([f86ed67](https://github.com/Wikiki/bulma-checkradio/commit/f86ed67))
+
+
+
 # Change Log
 
 ## [v0.1.4](https://github.com/wikiki/bulma-checkradio/tree/v0.1.4) (2017-11-30)
