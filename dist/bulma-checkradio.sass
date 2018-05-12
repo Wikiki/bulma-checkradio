@@ -13,10 +13,12 @@ $checkradio-top-offset: 0rem !default
     font-size: $size
     // line-height: $newSize
     padding-left: $size * 2
-    &::before
+    &::before,
+    &:before
       width: $newSize
       height: $newSize
-    &::after
+    &::after,
+    &:after
       width: $width
       height: $height
       top: ( ( $newSize / 2 ) - ( $height / 2 ) ) * 0.9
@@ -24,7 +26,8 @@ $checkradio-top-offset: 0rem !default
 
   &.is-block
     + label
-      &::after
+      &::after,
+      &:after
         top: ( ( ( $newSize / 2 ) - ( $height / 2 ) ) * 1.3 )
         left: $height * 1.3
 
@@ -32,7 +35,8 @@ $checkradio-top-offset: 0rem !default
     + label
       padding-left: 0
       padding-right: $size * 2
-      &::after
+      &::after,
+      &:after
         left: auto
         right: $height
 
@@ -46,7 +50,10 @@ $checkradio-top-offset: 0rem !default
     font-size: $size
     line-height: $newSize
     padding-left: $size * 2
-    &::before, &::after
+    &::before,
+    &:before,
+    &::after,
+    &:after
       width: $width
       height: $height
   &.is-rtl
@@ -71,19 +78,22 @@ $checkradio-top-offset: 0rem !default
     border-radius: $checkbox-radius
 
     &:hover
-      &::before
+      &::before,
+      &:before
         animation-duration: 0.4s
         animation-fill-mode: both
         animation-name: hover-color
 
-    &::before
+    &::before,
+    &:before
       position: absolute
       left: 0
       top: $checkradio-top-offset
       content: ''
       border: $checkbox-border
 
-    &::after
+    &::after,
+    &:after
       position: absolute
       display: none
       content: ''
@@ -93,32 +103,38 @@ $checkradio-top-offset: 0rem !default
     + label
       margin-right: 0rem
       margin-left: 0.5rem
-      &::before
+      &::before,
+      &:before
         left: auto
         right: 0
 
   &:focus
     + label
-      &::before
+      &::before,
+      &:before
         outline: $checkradio-focus
 
   &:hover:not([disabled])
     + label
-      &::before
+      &::before,
+      &:before
         border-color: $primary !important
 
   &:checked
     + label
-      &::before
+      &::before,
+      &:before
         border: $checkbox-border
     &[disabled]
       cursor: not-allowed
       + label
         opacity: 0.5
     + label
-      &::before
+      &::before,
+      &:before
         animation-name: none
-      &::after
+      &::after,
+      &:after
         display: inline-block
 
   &[disabled]
@@ -128,23 +144,29 @@ $checkradio-top-offset: 0rem !default
       cursor: not-allowed
       &:hover,
       &:before,
+      &::before,
+      &::after,
       &:after
         cursor: not-allowed
 
     &:hover
       cursor: not-allowed
-      &::before
+      &::before,
+      &:before
         animation-name: none
 
-    &::before
+    &::before,
+    &:before
       cursor: not-allowed
 
-    &::after
+    &::after,
+    &:after
       cursor: not-allowed
 
   &.has-no-border
     + label
-      &::before
+      &::before,
+      &:before
         border: none !important
 
   &.is-block
@@ -154,15 +176,18 @@ $checkradio-top-offset: 0rem !default
       background: $checkbox-block-background
       color: findColorInvert( $checkbox-block-background )
       padding-right: .75em
-      &::before
+      &::before,
+      &:before
         border: none !important
 
 .is-checkradio[type="checkbox"]
   + label
-    &::before
+    &::before,
+    &:before
       border-radius: $checkbox-radius
 
-    &::after
+    &::after,
+    &:after
       box-sizing: border-box
       transform: rotate(45deg)
       border-width: .1rem
@@ -173,7 +198,8 @@ $checkradio-top-offset: 0rem !default
 
   &.is-circle
     + label
-      &::before
+      &::before,
+      &:before
         border-radius: 50%
 
   +checkbox-size($size-normal)
@@ -190,23 +216,28 @@ $checkradio-top-offset: 0rem !default
     &.is-#{$name}
       &.has-background-color
         + label
-          &::before
+          &::before,
+          &:before
             border-color: transparent !important
             background-color: $color !important
       &:hover:not([disabled])
         + label
-          &::before
+          &::before,
+          &:before
             border-color: $color !important
       &:checked
         + label
-          &::after
+          &::after,
+          &:after
             border-color: $color !important
         &.has-background-color
           + label
-            &::before
+            &::before,
+            &:before
               border-color: transparent !important
               background-color: $color !important
-            &::after
+            &::after,
+            &:after
               border-color: $color-invert !important
               background-color: $color !important
         &.is-block
@@ -214,12 +245,14 @@ $checkradio-top-offset: 0rem !default
             color: $color-invert
             border-color: $color !important
             background: $color
-            &::after
+            &::after,
+            &:after
               border-color: $color-invert !important
 
   &:indeterminate
     + label
-      &::after
+      &::after,
+      &:after
         display: inline-block
         transform: rotate(90deg)
         border-bottom: none
@@ -228,14 +261,17 @@ $checkradio-top-offset: 0rem !default
       $color-invert: nth($pair, 2)
       &.is-#{$name}
         + label
-          &::after
+          &::after,
+          &:after
             border-color: $color
 
 .is-checkradio[type="radio"]
   + label
-    &::before
+    &::before,
+    &:before
       border-radius: 50%
-    &::after
+    &::after,
+    &:after
       border-radius: 50%
       background: $primary
       left: 0
@@ -244,17 +280,20 @@ $checkradio-top-offset: 0rem !default
   &:checked
     &.has-background-color
       + label
-        &::before
+        &::before,
+        &:before
           border-color: $text !important
           background-color: $text !important
-        &::after
+        &::after,
+        &:after
           border-color: $text !important
           background-color: $text !important
 
   &.is-rtl
     + label
       padding-left: 0
-      &::after
+      &::after,
+      &:after
         left: auto
         right: 0
 
@@ -272,23 +311,28 @@ $checkradio-top-offset: 0rem !default
     &.is-#{$name}
       &.has-background-color
         + label
-          &::before
+          &::before,
+          &:before
             border-color: $color !important
             background-color: $color !important
       &:hover:not([disabled])
         + label
-          &::before
+          &::before,
+          &:before
             border-color: $color !important
       &:checked
         + label
-          &::after
+          &::after,
+          &:after
             border-color: $color !important
             background-color: $color !important
         &.has-background-color
           + label
-            &::before
+            &::before,
+            &:before
               border-color: $color !important
               background-color: $color !important
-            &::after
+            &::after,
+            &:after
               border-color: $color-invert !important
               background-color: $color-invert !important

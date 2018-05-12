@@ -1,6 +1,6 @@
 {
   "name": "bulma-checkradio",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Make classic checkbox and radio more sexy in different colors, sizes, and states ",
   "main": "dist/bulma-checkradio.sass",
   "scripts": {

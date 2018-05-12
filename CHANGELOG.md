@@ -1,3 +1,13 @@
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/Wikiki/bulma-checkradio/compare/1.0.1...1.0.2) (2018-05-12)
+
+
+### Bug Fixes
+
+*  [#22](https://github.com/Wikiki/bulma-checkradio/issues/22) Checkmark doesn't show in IE11 ([7bc903e](https://github.com/Wikiki/bulma-checkradio/commit/7bc903e))
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/Wikiki/bulma-checkradio/compare/1.0.0...1.0.1) (2018-02-11)
 
