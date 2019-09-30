@@ -1,5 +1,5 @@
 # bulma-checkradio
-Bulma's extension to display better checkbox and radio imputs
+Bulma's extension to display better checkbox and radio inputs
 (find all my bulma's extensions [here](https://wikiki.github.io/))
 
 [![npm](https://img.shields.io/npm/v/bulma-checkradio.svg)](https://www.npmjs.com/package/bulma-checkradio)
