@@ -2,7 +2,8 @@
   "name": "bulma-checkradio",
   "version": "2.1.1",
   "description": "Make classic checkbox and radio more sexy in different colors, sizes, and states ",
-  "main": "./dist/css/bulma-checkradio.min.css",
+  "main": "./dist/css/bulma-checkradio.sass",
+  "style": "./dist/css/bulma-checkradio.min.css",
   "scripts": {
     "build": "gulp",
     "commit": "git-cz",
