@@ -14,7 +14,7 @@ const fs				  = require('fs');
 const log                 = require('fancy-log');
 const nop                  = require('gulp-nop');
 const postcss             = require('gulp-postcss');
-const sass                = require('gulp-sass');
+const sass                = require('gulp-sass')(require('sass'));
 const uglify              = require('gulp-uglify');
 
 /**
@@ -30,7 +30,7 @@ const paths = {
 const config = {
 	sass: {
 		input: 'index.sass',
-		dependencies: ['node_modules/bulma/sass/utilities/_all.sass'],
+		dependencies: [],
 		output: {
 			filename: pkg.name,
 			format: 'compressed'
