@@ -1,3 +1,6 @@
+@use "sass:math"
+@import "node_modules/bulma/sass/utilities/_all.sass"
+
 $checkbox-radius: $radius !default
 $checkbox-border: .1rem solid $grey-lighter !default
 $checkbox-block-background: $white-ter !default
@@ -7,12 +10,11 @@ $checkradio-top-offset: 0rem !default
 
 =checkbox-size($size)
   $newSize: $size * 1.5
-  $height: $newSize / 2.5
-  $width: $newSize / 4
+  $height: math.div($newSize, 2.5)
+  $width: math.div($newSize, 4)
 
   + label
     font-size: $size
-    // line-height: $newSize
     padding-left: $size * 2
     &::before,
     &:before
@@ -22,7 +24,7 @@ $checkradio-top-offset: 0rem !default
     &:after
       width: $width
       height: $height
-      top: ( ( $newSize / 2 ) - ( $height / 2 ) ) * 0.9
+      top: ( ( math.div($newSize, 2) ) - ( math.div($height, 2) ) ) * 0.9
       left: $height
 
   &.is-block
@@ -71,7 +73,7 @@ $checkradio-top-offset: 0rem !default
 .is-checkradio[type="checkbox"]
   outline: 0
   user-select: none
-  display: inline-block
+  display: none
   position: absolute
   opacity: 0
 
